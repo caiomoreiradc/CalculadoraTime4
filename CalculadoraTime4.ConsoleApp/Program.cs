@@ -4,6 +4,9 @@
     {
         static void Main(string[] args)
         {
+
+            // apenas um teste
+
             while (true)
             {
                 string opcao = MostrarMenu();
