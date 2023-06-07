@@ -1,7 +1,12 @@
-﻿namespace CalculadoraTime4.ConsoleApp
+using System;
+using System.Collections.Generic;
+
+namespace CalculadoraTime4.ConsoleApp
 {
     internal class Program
     {
+        static List<string> historico = new List<string>();
+
         static void Main(string[] args)
         {
             while (true)
@@ -23,25 +28,23 @@
                 else if (opcao == "4")
                     Dividir();
 
-                //if (funçãodaopçãoinvalida(opcao))
-                //cw "opção invalida"
+                else if (opcao == "5")
+                    Tabuada();
 
-                //else if (opcao == "5")
-                //TABUADA
+                else if (opcao == "6")
+                    MostrarHistorico();
 
-                //else if (opcao == "6")
-                //VISUALIZAR OPERAÇÕES
+                else
+                    Console.WriteLine("Opção inválida!");
 
-                //else
-                //FunçãodeFazerOperação(opcao);
+                Console.ReadKey();
             }
-
-            //teste
         }
 
         static void Adicao()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
 
             Console.Write("Digite o primeiro número: ");
             double primeiroNumero = Convert.ToDouble(Console.ReadLine());
@@ -50,15 +53,16 @@
             double segundoNumero = Convert.ToDouble(Console.ReadLine());
 
             double result = primeiroNumero + segundoNumero;
+            string operation = $"{primeiroNumero} + {segundoNumero} = {result}";
+
+            historico.Add(operation);
 
             Console.WriteLine($"O resultado da soma é: {result}");
-
-            Console.ReadKey();
         }
-
         static void Subtrair()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
 
             Console.Write("Digite o primeiro número: ");
             double primeiroNumero = Convert.ToDouble(Console.ReadLine());
@@ -67,15 +71,16 @@
             double segundoNumero = Convert.ToDouble(Console.ReadLine());
 
             double result = primeiroNumero - segundoNumero;
+            string operation = $"{primeiroNumero} - {segundoNumero} = {result}";
+
+            historico.Add(operation);
 
             Console.WriteLine($"O resultado da subtração é: {result}");
-
-            Console.ReadKey();
         }
-
         static void Multiplicar()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
 
             Console.Write("Digite o primeiro número: ");
             double primeiroNumero = Convert.ToDouble(Console.ReadLine());
@@ -84,15 +89,16 @@
             double segundoNumero = Convert.ToDouble(Console.ReadLine());
 
             double result = primeiroNumero * segundoNumero;
+            string operation = $"{primeiroNumero} * {segundoNumero} = {result}";
+
+            historico.Add(operation);
 
             Console.WriteLine($"O resultado da multiplicação é: {result}");
-
-            Console.ReadKey();
         }
-
         static void Dividir()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
 
             Console.Write("Digite o primeiro número: ");
             double primeiroNumero = Convert.ToDouble(Console.ReadLine());
@@ -101,15 +107,44 @@
             double segundoNumero = Convert.ToDouble(Console.ReadLine());
 
             double result = primeiroNumero / segundoNumero;
+            string operation = $"{primeiroNumero} / {segundoNumero} = {result}";
 
-            Console.WriteLine($"O resultado da multiplicação é: {result}");
+            historico.Add(operation);
 
-            Console.ReadKey();
+            Console.WriteLine($"O resultado da divisão é: {result}");
         }
-
-        static string MostrarMenu()
+        static void Tabuada()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            Console.WriteLine("Digite um número para gerar a tabuada: ");
+            int tabuada = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= 10; i++)
+            {
+                int multiplicacao = tabuada * i;
+
+                Console.WriteLine($"{tabuada} x {i} = {multiplicacao}");
+            }
+        }
+        static void MostrarHistorico()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            Console.WriteLine("Histórico de operações:");
+
+            foreach (string operation in historico)
+            {
+                Console.WriteLine(operation);
+            }
+        }
+        static string MostrarMenu()
+        {
+            Console.Title = "Calculadora do Grupo 4 - https://github.com/caiomoreiradc/CalculadoraTime4/";
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
 
             Console.WriteLine("==========================");
             Console.WriteLine("    Calculadora Time 4");
