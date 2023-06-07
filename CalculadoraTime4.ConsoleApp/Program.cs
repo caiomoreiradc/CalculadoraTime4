@@ -4,9 +4,6 @@
     {
         static void Main(string[] args)
         {
-
-            // apenas um teste
-
             while (true)
             {
                 string opcao = MostrarMenu();
@@ -15,10 +12,13 @@
                     break;
 
                 if (opcao == "1")
-                    Adicao();       
-                
-                if (opcao == "2")
                     Adicao();
+
+                if (opcao == "2")
+                    Subtrair();
+
+                else if (opcao == "3")
+                    Multiplicar();
 
                 //if (funçãodaopçãoinvalida(opcao))
                     //cw "opção invalida"
@@ -66,6 +66,23 @@
             double result = primeiroNumero - segundoNumero;
 
             Console.WriteLine($"O resultado da subtração é: {result}");
+
+            Console.ReadKey();
+        }
+
+        static void Multiplicar()
+        {
+            Console.Clear();
+
+            Console.Write("Digite o primeiro número: ");
+            double primeiroNumero = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Digite o segundo número: ");
+            double segundoNumero = Convert.ToDouble(Console.ReadLine());
+
+            double result = primeiroNumero * segundoNumero;
+
+            Console.WriteLine($"O resultado da multiplicação é: {result}");
 
             Console.ReadKey();
         }
