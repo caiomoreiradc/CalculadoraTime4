@@ -14,23 +14,26 @@
                 if (opcao == "1")
                     Adicao();
 
-                if (opcao == "2")
+                else if (opcao == "2")
                     Subtrair();
 
                 else if (opcao == "3")
                     Multiplicar();
 
+                else if (opcao == "4")
+                    Dividir();
+
                 //if (funçãodaopçãoinvalida(opcao))
-                    //cw "opção invalida"
+                //cw "opção invalida"
 
                 //else if (opcao == "5")
-                    //TABUADA
+                //TABUADA
 
                 //else if (opcao == "6")
-                    //VISUALIZAR OPERAÇÕES
+                //VISUALIZAR OPERAÇÕES
 
                 //else
-                    //FunçãodeFazerOperação(opcao);
+                //FunçãodeFazerOperação(opcao);
             }
 
             //teste
@@ -51,8 +54,8 @@
             Console.WriteLine($"O resultado da soma é: {result}");
 
             Console.ReadKey();
-        }        
-        
+        }
+
         static void Subtrair()
         {
             Console.Clear();
@@ -81,6 +84,23 @@
             double segundoNumero = Convert.ToDouble(Console.ReadLine());
 
             double result = primeiroNumero * segundoNumero;
+
+            Console.WriteLine($"O resultado da multiplicação é: {result}");
+
+            Console.ReadKey();
+        }
+
+        static void Dividir()
+        {
+            Console.Clear();
+
+            Console.Write("Digite o primeiro número: ");
+            double primeiroNumero = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Digite o segundo número: ");
+            double segundoNumero = Convert.ToDouble(Console.ReadLine());
+
+            double result = primeiroNumero / segundoNumero;
 
             Console.WriteLine($"O resultado da multiplicação é: {result}");
 
