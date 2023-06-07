@@ -12,6 +12,9 @@
                     break;
 
                 if (opcao == "1")
+                    Adicao();       
+                
+                if (opcao == "2")
                     Adicao();
 
                 //if (funçãodaopçãoinvalida(opcao))
@@ -37,12 +40,29 @@
             Console.Write("Digite o primeiro número: ");
             double primeiroNumero = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Digite o primeiro número: ");
+            Console.Write("Digite o segundo número: ");
             double segundoNumero = Convert.ToDouble(Console.ReadLine());
 
             double result = primeiroNumero + segundoNumero;
 
             Console.WriteLine($"O resultado da soma é: {result}");
+
+            Console.ReadKey();
+        }        
+        
+        static void Subtrair()
+        {
+            Console.Clear();
+
+            Console.Write("Digite o primeiro número: ");
+            double primeiroNumero = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Digite o segundo número: ");
+            double segundoNumero = Convert.ToDouble(Console.ReadLine());
+
+            double result = primeiroNumero - segundoNumero;
+
+            Console.WriteLine($"O resultado da subtração é: {result}");
 
             Console.ReadKey();
         }
