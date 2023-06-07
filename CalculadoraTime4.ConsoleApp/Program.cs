@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 
 namespace CalculadoraTime4.ConsoleApp
 {
@@ -46,6 +47,7 @@ namespace CalculadoraTime4.ConsoleApp
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Cyan;
 
+
             Console.Write("Digite o primeiro número: ");
             double primeiroNumero = Convert.ToDouble(Console.ReadLine());
 
@@ -53,6 +55,7 @@ namespace CalculadoraTime4.ConsoleApp
             double segundoNumero = Convert.ToDouble(Console.ReadLine());
 
             double result = primeiroNumero + segundoNumero;
+
             string operation = $"{primeiroNumero} + {segundoNumero} = {result}";
 
             historico.Add(operation);
@@ -64,6 +67,17 @@ namespace CalculadoraTime4.ConsoleApp
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Cyan;
 
+
+            Console.WriteLine($"O resultado da soma é: {result}");
+
+            Console.ReadKey();
+        }
+
+        static void Subtrair()
+        {
+            Console.Clear();
+>>>>>>> master
+
             Console.Write("Digite o primeiro número: ");
             double primeiroNumero = Convert.ToDouble(Console.ReadLine());
 
@@ -71,6 +85,7 @@ namespace CalculadoraTime4.ConsoleApp
             double segundoNumero = Convert.ToDouble(Console.ReadLine());
 
             double result = primeiroNumero - segundoNumero;
+
             string operation = $"{primeiroNumero} - {segundoNumero} = {result}";
 
             historico.Add(operation);
@@ -82,6 +97,17 @@ namespace CalculadoraTime4.ConsoleApp
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Cyan;
 
+
+            Console.WriteLine($"O resultado da subtração é: {result}");
+
+            Console.ReadKey();
+        }
+
+        static void Multiplicar()
+        {
+            Console.Clear();
+
+
             Console.Write("Digite o primeiro número: ");
             double primeiroNumero = Convert.ToDouble(Console.ReadLine());
 
@@ -89,6 +115,7 @@ namespace CalculadoraTime4.ConsoleApp
             double segundoNumero = Convert.ToDouble(Console.ReadLine());
 
             double result = primeiroNumero * segundoNumero;
+
             string operation = $"{primeiroNumero} * {segundoNumero} = {result}";
 
             historico.Add(operation);
@@ -100,6 +127,17 @@ namespace CalculadoraTime4.ConsoleApp
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Cyan;
 
+
+            Console.WriteLine($"O resultado da multiplicação é: {result}");
+
+            Console.ReadKey();
+        }
+
+        static void Dividir()
+        {
+            Console.Clear();
+
+
             Console.Write("Digite o primeiro número: ");
             double primeiroNumero = Convert.ToDouble(Console.ReadLine());
 
@@ -107,6 +145,7 @@ namespace CalculadoraTime4.ConsoleApp
             double segundoNumero = Convert.ToDouble(Console.ReadLine());
 
             double result = primeiroNumero / segundoNumero;
+
             string operation = $"{primeiroNumero} / {segundoNumero} = {result}";
 
             historico.Add(operation);
@@ -145,6 +184,17 @@ namespace CalculadoraTime4.ConsoleApp
             Console.Title = "Calculadora do Grupo 4 - https://github.com/caiomoreiradc/CalculadoraTime4/";
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Cyan;
+
+
+            Console.WriteLine($"O resultado da multiplicação é: {result}");
+
+            Console.ReadKey();
+        }
+
+        static string MostrarMenu()
+        {
+            Console.Clear();
+
 
             Console.WriteLine("==========================");
             Console.WriteLine("    Calculadora Time 4");
