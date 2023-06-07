@@ -11,6 +11,9 @@
                 if (opcao.Equals("s", StringComparison.OrdinalIgnoreCase))
                     break;
 
+                if (opcao == "1")
+                    Adicao();
+
                 //if (funçãodaopçãoinvalida(opcao))
                     //cw "opção invalida"
 
@@ -26,6 +29,24 @@
 
             //teste
         }
+
+        static void Adicao()
+        {
+            Console.Clear();
+
+            Console.Write("Digite o primeiro número: ");
+            double primeiroNumero = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Digite o primeiro número: ");
+            double segundoNumero = Convert.ToDouble(Console.ReadLine());
+
+            double result = primeiroNumero + segundoNumero;
+
+            Console.WriteLine($"O resultado da soma é: {result}");
+
+            Console.ReadKey();
+        }
+
         static string MostrarMenu()
         {
             Console.Clear();
